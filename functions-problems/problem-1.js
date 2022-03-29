@@ -12,13 +12,12 @@ let testString = 'This is the given test string'
 
 function findLongestWord(str) {
   str.split(" ");
-  for (let i = 0; i < str.length; i++) {
-    for (j = 0; j < str.length; j++) {
-      if (str[i].length > str[j].length) {
-        return str[i];
-      }
-    }
+  let numberOfLetters = [];
+  for (i = 0; i < str.length; i++) {
+    numberOfLetters.push(i.length);
   }
+  return numberOfLetters;
 }
 
-console.log(findLongestWord(testString));
+let test = findLongestWord(testString);
+console.log(test);
