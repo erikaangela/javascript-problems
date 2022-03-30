@@ -12,27 +12,14 @@
 let testString = 'This is the given test string';
 let testLetter = 't';
 
-function numberOfTimesLetterinWord(str, ltr) {
-  let splitString = str.split("");
+function numberOfTimesLetterInWord(str, ltr) {
   let count = 0;
-  for (let i = 0; i < splitString.length; i++) {
-    if (splitString[0].includes(ltr)) {
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === ltr) {
       count++;
     }
   }
   return count;
 }
 
-console.log(numberOfTimesLetterinWord(testString, testLetter));
-
-
-
-// function numberOfTimesLetterinWord(str, ltr) {
-//   let count = 0;
-//   for (let i = 0; i < str.length; i++) {
-//     if (str[0] === ltr) {
-//       count++;
-//     }
-//   }
-//   return count;
-// }
+console.log(numberOfTimesLetterInWord(testString, testLetter));

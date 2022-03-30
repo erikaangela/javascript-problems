@@ -23,3 +23,21 @@ function countNumberOfVowels(str) {
 }
 
 console.log(countNumberOfVowels(testString));
+
+// Alternative way to solve problem
+
+// const testString = 'This is the given test string';
+//
+// function countNumberOfVowels(str) {
+//   let splitString = str.split("");
+//   const vowels = ['a','e','i','o','u'];
+//   let vowelCount = 0;
+//   for (let i = 0; i < splitString.length; i++) {
+//     if (vowels.includes(splitString[i])) {
+//       vowelCount++;
+//     }
+//   }
+//   return vowelCount;
+// }
+//
+// console.log(countNumberOfVowels(testString));
