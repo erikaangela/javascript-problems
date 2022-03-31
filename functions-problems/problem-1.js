@@ -11,7 +11,7 @@
 let testString = 'This is the given test string'
 
 function findLongestWord(str) {
-  let splitString = str.split(" ");
+  let splitString = str.split(" "); // must split string because looking for word, NOT character
   let longestWord = ""; // longestWord starting at length 0
   for (let i = 0; i < splitString.length; i++) {
     if (splitString[i].length > longestWord.length) {

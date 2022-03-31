@@ -9,19 +9,36 @@
 
 function fizzBuzz () {
   for (let i = 1; i <= 100; i++) {
-    if (i % 3 === 0 && i % 5 === 0) {
-      console.log('FizzBuzz');
-    } else if (i % 3 === 0) {
-      console.log('Fizz');
-    } else if (i % 5 === 0) {
-      console.log('Buzz');
+    let word = ""; // adds to empty string - constructs it for us before looping
+    if (i % 3 === 0) {
+      word += 'Fizz';
     }
+    if (i % 5 === 0) {
+      word += 'Buzz';
+    } // don't need if else because if i satisfies BOTH if statements, it will add Fizz and Buzz to word
+    console.log(word, i);
   }
 }
 
 fizzBuzz();
 
+// We can simplify this (see above)
+// function fizzBuzz () {
+//   for (let i = 1; i <= 100; i++) {
+//     if (i % 3 === 0 && i % 5 === 0) {
+//       console.log('FizzBuzz');
+//     } else if (i % 3 === 0) {
+//       console.log('Fizz');
+//     } else if (i % 5 === 0) {
+//       console.log('Buzz');
+//     }
+//   }
+// }
+//
+// fizzBuzz();
 
+
+// Can NOT use this statement because switch takes one expression that could evaluate to multiple values, not multiple expressions
 // switch (i % 3) {
 //   case (0):
 //     console.log('Fizz');

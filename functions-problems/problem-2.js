@@ -13,9 +13,10 @@ const testString = 'This is the given test string';
 
 function countNumberOfVowels(str) {
   let splitString = str.split("");
+  const vowels = ['a','e','i','o','u'];
   let vowelCount = 0;
   for (let i = 0; i < splitString.length; i++) {
-    if (splitString[i].includes('a') || splitString[i].includes('e') || splitString[i].includes('i') || splitString[i].includes('o') || splitString[i].includes('u')) {
+    if (vowels.includes(splitString[i].toLowerCase())) { // toLowerCase accounts for any uppercase letters
       vowelCount++;
     }
   }
@@ -24,16 +25,15 @@ function countNumberOfVowels(str) {
 
 console.log(countNumberOfVowels(testString));
 
-// Alternative way to solve problem
 
+// We could simplify this (see above)
 // const testString = 'This is the given test string';
 //
 // function countNumberOfVowels(str) {
 //   let splitString = str.split("");
-//   const vowels = ['a','e','i','o','u'];
 //   let vowelCount = 0;
 //   for (let i = 0; i < splitString.length; i++) {
-//     if (vowels.includes(splitString[i])) {
+//     if (splitString[i].includes('a') || splitString[i].includes('e') || splitString[i].includes('i') || splitString[i].includes('o') || splitString[i].includes('u')) {
 //       vowelCount++;
 //     }
 //   }
