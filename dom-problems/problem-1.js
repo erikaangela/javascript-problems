@@ -6,12 +6,16 @@
 
 <html>
 
-  <head></head>
+  <head>
+  <script>
+
+  </script>
+  </head>
 
   <body>
 
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam convallis ut sem vel fermentum. Sed volutpat nisl ornare finibus maximus. Etiam viverra imperdiet nisl nec bibendum. Aliquam egestas imperdiet magna, nec semper eros sodales sed. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rhoncus fermentum sem consequat venenatis.</p>
-    <button></button>
+    <button onclick="document.style.backgroundColor">Click here</button>
 
   </body>
 
