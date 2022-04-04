@@ -1,0 +1,32 @@
+<!-- Create an HTML page with a button and a P element with a link inside.
+
+Then, write a JavaScript function to get the HREF attribute of the link when you click the button.
+-->
+
+<!-- Steps
+1. Set up a basic HTML page with declaration, head, body, and script (for JavaScript) tags.
+2. Create a button and a P element with a link inside.
+3. Write a JavaScript function that gets the HREF attribute of the link in the P element by using an onlick on the button.
+-->
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+  </head>
+
+  <body>
+    <p id='paragraph'>This is the <a id='link' href='https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwjujZiL3vr2AhXWIEQIHUYGAuwQPAgI'>link</a></p>
+    <button onclick='hrefLink()'>Click here for link URL</button>
+
+    <!-- Put script at bottom of body to improve display speed -->
+    <script>
+      function hrefLink () {
+        const spanLink = document.getElementById('link').getAttribute('href');
+        document.getElementById('paragraph').innerText = spanLink;
+      }
+    </script>
+
+  </body>
+
+</html>
