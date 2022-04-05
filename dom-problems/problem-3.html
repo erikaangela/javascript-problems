@@ -13,7 +13,7 @@
 1. Set up a basic HTML document with declaration, html, head, body, and script (for JavaScript) tags.
 2. Create a button and a dropdown list with three items in it.
 3. Write a JavaScript function using select onchange displaying the number of list items.
-4. In the same JavaScript function, display the item when it is selected from the dropdown.
+4. Write a JavaScript function displaying the item when it is selected from the dropdown.
 -->
 
 <!DOCTYPE html>
@@ -24,19 +24,34 @@
 
   <body>
 
-    <button>Empty button<button>
+    <button onclick='numberOfItemsInList(); listItems()'>List count<button>
     <label for="list">Choose an item:</label>
-      <select name="list" id="list">
+      <select name="list" id="list" onchange='selectedItem()'>
         <option value="item-1">item 1</option>
         <option value="item-2">item 2</option>
         <option value="item-3">item 3</option>
       </select>
 
-    <p></p>
+    <p id='blank'></p>
+    <p id='otherBlank'></p>
+    <p id='anotherBlank'></p>
 
     <script>
-      function selectedItemOutOfNumberOfItems () {
-
+      function selectedItem () {
+        const selected = document.getElementById('list').value;
+        document.getElementById('anotherBlank').innerText = 'You selected: ' + selected;
+      }
+      function numberOfItemsInList () {
+        const listLength = document.getElementById('list').options.length;
+        document.getElementById('blank').innerText = 'Found ' + listLength + ' items in list.';
+      }
+      function listItems () {
+        const list = document.getElementById('list');
+        let txt = '';
+        for (let i = 0; i < list.length; i++) {
+          txt += list.options[i].text + '\n';
+        }
+        document.getElementById('otherBlank').innerText = txt;
       }
     </script>
 
