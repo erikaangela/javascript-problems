@@ -6,5 +6,15 @@ Hint: To solve this, look up the JavaScript array sort method, and pay close att
 */
 
 /* Steps
-1. 
+1. Define a JavaScript function that takes in an array.
+2. Declare and initialize an arbitrary array of numbers/integers.
+3. Within the function, return the sorted array, from greatest to least.
 */
+
+const myArray = [2, 4, 17, 9, 25, -2, 88];
+
+function greatestToLeast (arr) {
+  return arr.sort(function(a, b){return a-b});
+}
+
+console.log(greatestToLeast(myArray));
