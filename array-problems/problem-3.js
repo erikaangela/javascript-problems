@@ -14,7 +14,8 @@ Hint: To solve this, look up the JavaScript array sort method, and pay close att
 const myArray = [2, 4, 17, 9, 25, -2, 88];
 
 function greatestToLeast (arr) {
-  return arr.sort(function(a, b){return a-b});
+  let sortedArray = arr.sort(function(a, b){return a-b});
+  return sortedArray.reverse();
 }
 
 console.log(greatestToLeast(myArray));
