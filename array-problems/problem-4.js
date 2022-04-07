@@ -16,10 +16,12 @@ const myArray = ['blue', 'Blue', 'red', 'yellow', 'bLue', 'green'];
 
 function removeDuplicates (arr) {
   let newArray = [];
-  for (let i = 0; i < arr.length; i++) {
-    arr[i].toLowerCase();
-    if (!newArray.includes(arr[i])) {
-      newArray.push(arr[i]);
+  let revisedArray = arr.forEach(element => {
+    element.toLowerCase();
+  });
+  for (let i = 0; i < revisedArray.length; i++) {
+    if (!newArray.includes(revisedArray[i])) {
+      newArray.push(revisedArray[i]);
     }
   }
   return newArray;
