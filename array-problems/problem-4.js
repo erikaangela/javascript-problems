@@ -15,17 +15,18 @@ NOTE: Do NOT use the Set method.
 const myArray = ['blue', 'Blue', 'red', 'yellow', 'bLue', 'green'];
 
 function removeDuplicates (arr) {
-  let newArray = [];
-  let revisedArray = arr.forEach(element => {
-    element.toLowerCase();
-  });
-  for (let i = 0; i < revisedArray.length; i++) {
-    if (!newArray.includes(revisedArray[i])) {
-      newArray.push(revisedArray[i]);
+  let revisedArray = [];
+  arr.forEach(function fixCaseSensitivity (i) {
+    if (!revisedArray.includes(i) && !revisedArray.includes(i.toLowerCase())) {
+      revisedArray.push(i);
     }
-  }
-  return newArray;
+  })
+  return revisedArray;
 }
+
+console.log(removeDuplicates(myArray));
+
+
 
 // function removeDuplicates (arr) {
 //   for (let i = 0; i < arr.length; i++) {
@@ -35,5 +36,3 @@ function removeDuplicates (arr) {
 //   }
 //   return arr;
 // }
-
-console.log(removeDuplicates(myArray));
