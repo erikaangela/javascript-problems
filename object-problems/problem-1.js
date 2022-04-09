@@ -17,7 +17,7 @@ const dayObject = {
 }
 
 function removeObjectProperty (objectName, propName) {
-  delete objectName.[propName];
+  delete objectName[propName];
 }
 
 removeObjectProperty(dayObject, 'color');
