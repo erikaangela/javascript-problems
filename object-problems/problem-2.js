@@ -7,22 +7,31 @@
 4. Within the function, console log the first and last name of each person.
 */
 
-const peopleFactory = (firstName, lastName, age) => {
-  return {
-    firstName,
-    lastName,
-    age
+const people = [
+  {
+    firstName: 'Jane',
+    lastName: 'Doe',
+    age: 22
+  },
+  {
+    firstName: 'John',
+    lastName: 'Doe',
+    age: 23
   }
-};
-
-let profileOne = peopleFactory('Jane', 'Doe', 22);
-let profileTwo = peopleFactory('John', 'Doe', 23);
-
-let myArray = [profileOne, profileTwo];
+]
 
 function firstLastName (arr) {
-  for (let i = 0; i < arr.length; i++) {
-    { firstName } = peopleFactory;
-    console.log(firstName);
-  }
+  arr.forEach(person => {
+    console.log(`${person.lastName}, ${person.firstName}`);
+  })
 }
+
+firstLastName(people);
+
+// function firstLastName (arr) { // returns all properties and an undefined
+//   arr.forEach(object => {
+//     for (let key in object) {
+//       console.log(`${key}: ${object[key]}`);
+//     }
+//   })
+// }
