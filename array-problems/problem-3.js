@@ -24,4 +24,18 @@ function greatestToLeast (arr) {
 //   return sortedArray.reverse();
 // }
 
+// Alternative solution: able to manipulate method for more custom intention
+// function sortNumber(arr){
+//     return arr.sort(function(a,b){
+//         // look at the return values
+//         if (a < b) {
+//             return 1; // typical way would return -1, but we use 1 for reversal
+//         }
+//         if(a > b) {
+//             return -1; // same idea
+//         }
+//         return 0; // if numbers equal
+//     });
+// }
+
 console.log(greatestToLeast(myArray));
