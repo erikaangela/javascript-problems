@@ -18,3 +18,11 @@ function findTheSumOf (arr) {
 }
 
 console.log(findTheSumOf(arrayOfIntegers));
+
+
+// function findTheSumOf (arr) {
+//   if (arr.length === 1) {
+//     return arr[0];
+//   }
+//   return arr[arr.length] + findTheSumOf(arr.slice(1, ));
+// }
