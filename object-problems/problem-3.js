@@ -23,11 +23,16 @@ const condiments = {
 }
 
 function numberOfItemsIn (object) {
-  let count = 0;
-  for (let item in object) {
-    count++;
-  }
-  return count;
+  return Object.keys(object).length;
 }
+
+// Alternative solution
+// function numberOfItemsIn (object) {
+//   let count = 0;
+//   for (let item in object) {
+//     count++;
+//   }
+//   return count;
+// }
 
 console.log(numberOfItemsIn(condiments));
