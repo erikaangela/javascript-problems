@@ -12,14 +12,22 @@
 const number = 5;
 
 function findTheFactorialOf (num) {
-  if (num <= 1) {
+  if (num === 1) {
     return num;
   }
   return num * findTheFactorialOf(num - 1);
 }
 
 // Alternative solution
-// function factorial(num) { 
+// function findTheFactorialOf (num) {
+//   if (num <= 1) {
+//     return num;
+//   }
+//   return num * findTheFactorialOf(num - 1);
+// }
+
+// Alternative solution
+// function factorial(num) {
 //   if (num === 0){
 //     return 1;
 //   }
