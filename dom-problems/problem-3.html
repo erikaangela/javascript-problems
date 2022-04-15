@@ -32,18 +32,18 @@
         <option value="item-3">item 3</option>
       </select>
 
-    <p id='blank'></p>
-    <p id='otherBlank'></p>
-    <p id='anotherBlank'></p>
+    <p id='numberOfItemsInList'></p>
+    <p id='listItems'></p>
+    <p id='selectedItem'></p>
 
     <script>
       function selectedItem () {
         const selected = document.getElementById('list').value;
-        document.getElementById('anotherBlank').innerText = 'You selected: ' + selected;
+        document.getElementById('selectedItem').innerText = 'You selected: ' + selected;
       }
       function numberOfItemsInList () {
         const listLength = document.getElementById('list').options.length;
-        document.getElementById('blank').innerText = 'Found ' + listLength + ' items in list.';
+        document.getElementById('numberOfItemsInList').innerText = 'Found ' + listLength + ' items in list.';
       }
       function listItems () {
         const list = document.getElementById('list');
@@ -51,7 +51,7 @@
         for (let i = 0; i < list.length; i++) {
           txt += list.options[i].text + '\n';
         }
-        document.getElementById('otherBlank').innerText = txt;
+        document.getElementById('listItems').innerText = txt;
       }
     </script>
 
